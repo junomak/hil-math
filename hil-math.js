@@ -1,3 +1,5 @@
+        //be rejected
+        
         // Combinatorial functions.
         function factorial(n) {
             if (!(JXG.isNumber(n) && n % 1 === 0)) throw "Input must be an integer.";
