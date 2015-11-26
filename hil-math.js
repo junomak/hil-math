@@ -70,7 +70,7 @@
 
         // Calculate geometric probability P(x1<=X<=x2) when X ~ Geo(p).
         function geometricProbSum(p, x1, x2) {
-            if (x2 === Infinity) return (1 - geometricProbSum(p, 1, x1));
+            //if (x2 === Infinity) return (1 - geometricProbSum(p, 1, x1));
             var prob = 0;
             x2 = x2 ? x2 : x1;
             for (var i = x1; i <= x2; i++) {
@@ -87,7 +87,7 @@
         }
 
         function poissonProbSum(l, x1, x2) {
-            if (x2 === Infinity) return (1 - poissonProbSum(l, 0, x1));
+            //if (x2 === Infinity) return (1 - poissonProbSum(l, 0, x1));
             var prob = 0;
             x2 = x2 ? x2 : x1;
             for (var i = x1; i <= x2; i++) {
