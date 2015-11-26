@@ -29,7 +29,7 @@
             return nCr(n-1, r-1)+nCr(n-1, r);
         }
         
-        //genearting Permutation
+        //genearting random Permutation: listing r objects from [0,1,2,...,n-1] 
 	function randomPermutation(r, n) {	
 		var pool=[], recordRand=[];		
 		for (i=0; i<n; i++){
@@ -44,6 +44,13 @@
 				pool.splice(index, 1);
 			}
 		}
+		return recordRand;
+	}
+	//generate random record of: choosing r objects from [0,1,2,...,n-1] 
+	function randomCombination(r, n) {	
+		var recordRand=[];		
+		recordRand= randomPermutation(r, n);
+		recordRand = recordRand.sort(function(a, b){return a-b});
 		return recordRand;
 	}
 	
