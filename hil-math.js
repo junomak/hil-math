@@ -28,7 +28,25 @@
             if (r == n) return 1;
             return nCr(n-1, r-1)+nCr(n-1, r);
         }
-
+        
+        //genearting Permutation
+	function randomPermutation(r, n) {	
+		var pool=[], recordRand=[];		
+		for (i=0; i<n; i++){
+			pool.push(i);
+		}
+		recordRand.length = 0;
+		for (i=0; i<r; i++) {
+			var next = pool[Math.floor(Math.random()*pool.length)];
+			recordRand.push(next);
+			var index = pool.indexOf(next);
+			if (index > -1) {
+				pool.splice(index, 1);
+			}
+		}
+		return recordRand;
+	}
+	
         // Calculate binomial probability P(X=x) when X ~ B(n,p).
         function binomialProb(n, x, p) {
             return nCr(n, x) * Math.pow(p, x) * Math.pow(1 - p, n - x);
