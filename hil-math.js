@@ -13,12 +13,12 @@
             return n * nPr(n - 1, r - 1);
         }
 
-        function nCr(n, r) {
+        /*function nCr(n, r) {
             if (!(JXG.isNumber(n) && n % 1 === 0 && JXG.isNumber(r) && r % 1 === 0)) throw "Input must be an integer.";
             if (r > n) return 0;
             if (r > n / 2) r = n - r;
             return nPr(n, r) / factorial(r);
-        }
+        }*/
         
         function nCr(n, r) {
             if (!(JXG.isNumber(n) && n % 1 === 0 && JXG.isNumber(r) && r % 1 === 0)) throw "Input must be an integer.";
