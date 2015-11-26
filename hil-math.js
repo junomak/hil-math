@@ -19,6 +19,15 @@
             if (r > n / 2) r = n - r;
             return nPr(n, r) / factorial(r);
         }
+        
+        function nCr(n, r) {
+            if (!(JXG.isNumber(n) && n % 1 === 0 && JXG.isNumber(r) && r % 1 === 0)) throw "Input must be an integer.";
+            if (r > n) return 0;
+            if (n == 1) return 1;
+            if (r == 0) return 1;
+            if (r == n) return 1;
+            return nCr(n-1, r-1)+nCr(n-1, r);
+        }
 
         // Calculate binomial probability P(X=x) when X ~ B(n,p).
         function binomialProb(n, x, p) {
